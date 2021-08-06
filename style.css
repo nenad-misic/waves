@@ -55,7 +55,7 @@ h2 {
   position: relative;
   font-style: normal;
   z-index: 1;
-  font-size: 8em;
+  font-size: calc(6em + 1vw);
   font-family: 'Trebuchet', sans-sherif;
   margin: 0 0 10px;
   color: rgba(255, 255, 230, 0.8);
@@ -65,7 +65,7 @@ h2 {
 p {
   position: relative;
   z-index: 1;
-  font-size: 25px;
+  font-size: calc(1em + 0.5vw);
   color: rgba(255, 255, 200, 0.5);
   line-height: 1.4;
   text-align: justify;
