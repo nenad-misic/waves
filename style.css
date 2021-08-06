@@ -1,0 +1,155 @@
+:root {
+  --color: #313878;
+}
+
+@keyframes animate
+{
+0%
+	{
+	background-position: 0 0;
+	}
+100%
+  {
+  background-position: 100% 100%;		
+  }	
+}
+ 
+body { 
+  background-color: rgb(75, 75, 75) !important;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+
+.fq{
+	position:absolute;
+	width: 100%;
+  height: 60vh;
+  background-image: url("wave.png");
+  background-repeat: repeat;
+  background-size: 100%;
+  transition: background-position linear 1800s;
+}
+
+
+
+* {
+  font-size: 14px;
+  font-style: normal;
+  font-family: 'Helvetica', sans-sherif;
+  margin: 0;
+  padding: 0;
+}
+ 
+.content {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 30vh;
+}
+ 
+h2 {
+  position: relative;
+  font-style: normal;
+  z-index: 1;
+  font-size: 8em;
+  font-family: 'Trebuchet', sans-sherif;
+  margin: 0 0 10px;
+  color: rgba(255, 255, 230, 0.8);
+  line-height: 1;
+}
+ 
+p {
+  position: relative;
+  z-index: 1;
+  font-size: 25px;
+  color: rgba(255, 255, 200, 0.5);
+  line-height: 1.4;
+  text-align: justify;
+}
+ 
+ 
+.waves-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: url(noise.jpg);
+  height: 100vh;
+  width: 100vw;
+  box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5);
+  transition: 500ms;
+  animation: animate .5s steps(7) infinite;
+  opacity: 0.9;
+}
+
+.waves {
+  height: 100%;
+  width: 100%;
+  background: #313878dd !important;
+  
+}
+
+.wave1 {
+  position: absolute;
+  width: 300%;
+  height: 300vw;
+  top: -50vw;
+  left: 50%;
+  transform: translate(-50%, -75%);
+  opacity: 0.8;
+  border-radius: 45%;
+  background: rgba(75, 75, 75, 1);
+  animation: wvs 8s linear infinite;
+}
+
+
+.wave2 {
+  position: absolute;
+  width: 300%;
+  height: 300vw;
+  top: -45vw;
+  left: 50%;
+  transform: translate(-50%, -75%);
+  border-radius: 44%;
+  background: rgba(75, 75, 75, 0.5);
+  animation: wvs 15s linear infinite;
+}
+
+ 
+.wave3 {
+  position: absolute;
+  width: 300%;
+  height: 300vw;
+  top: -39vw;
+  left: 50%;
+  transform: translate(-50%, -75%);
+  border-radius: 43%;
+  background: rgba(75, 75, 75, 0.5);
+  animation: wvs 22s linear infinite;
+}
+
+.wave4 {
+  position: absolute;
+  width: 300%;
+  height: 300vw;
+  top: -35vw;
+  left: 50%;
+  transform: translate(-50%, -75%);
+  border-radius: 42%;
+  background: rgba(75, 75, 75, 0.5);
+  animation: wvs 29s linear infinite;
+}
+ 
+@keyframes wvs {
+  0% {
+    transform: translate(-50%, -75%) rotate(0deg);
+  }
+   
+  100% {
+    transform: translate(-50%, -75%) rotate(180deg);
+  }
+}

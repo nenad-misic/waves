@@ -1,0 +1,21 @@
+
+All should be done in Waves.html, or any other new .html file.
+Waves.html contains a sample of what is done so far.
+
+Spec 1: Waves: 4 of them, not 2. Need to keep variables in original script 
+(so that I can control of color, wave properties/speed/distance from each other, etc)
+
+Spec 2: Blue in background of waves needs to have a "static" filter which is highly transparent 
+(think left 4 dead 'grain' filter. Static has already been made, just has to be overlayed on the waves part)
+
+Spec 3: 4 parallel white lines moving left to right across black section of upper screen 
+(updating 10Hz / 10x per second, from  a .CSV file or equivalent).
+
+One cycle: 
+	1st line using 1st dataset is drawn from left to right in 30seconds and then cleared.
+	2nd line using 2nd dataset is drawn from left to right in 30seconds and then cleared.
+	3rd line using 3rd dataset is drawn from left to right in 30seconds and then cleared.
+	4th line using 4th dataset is drawn from left to right in 30seconds and then cleared.
+
+Spec 4: Blue in background waves needs to transition from BLUE x1 to BLUE x 2 at 30 
+second intervals (or whatever variable I change in the code)
