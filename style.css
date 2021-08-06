@@ -1,7 +1,3 @@
-:root {
-  --color: #313878;
-}
-
 @keyframes animate
 {
 0%
@@ -96,7 +92,12 @@ p {
   height: 100%;
   width: 100%;
   transform: translate(0px, 35vh);
-  background: #313878dd !important;
+  -webkit-transition: background-color 1s ease-out;
+  -moz-transition: background-color 1s ease-out;
+  -o-transition: background-color 1s ease-out;
+  transition: background-color 1s ease-out;
+  background-color: #313878dd;
+  
   
 }
 
@@ -106,11 +107,11 @@ p {
   height: 300vw;
   top: -50vw;
   left: 50%;
-  transform: translate(-50%, -75%);
   opacity: 0.8;
   border-radius: 45%;
   background: rgba(75, 75, 75, 1);
-  animation: wvs 8s linear infinite;
+  animation-duration: 8s;
+  animation: wvs linear infinite;
 }
 
 
@@ -120,10 +121,10 @@ p {
   height: 300vw;
   top: -45vw;
   left: 50%;
-  transform: translate(-50%, -75%);
   border-radius: 44%;
   background: rgba(75, 75, 75, 0.5);
-  animation: wvs 15s linear infinite;
+  animation-duration: 15s;
+  animation: wvs linear infinite;
 }
 
  
@@ -133,10 +134,10 @@ p {
   height: 300vw;
   top: -39vw;
   left: 50%;
-  transform: translate(-50%, -75%);
   border-radius: 43%;
   background: rgba(75, 75, 75, 0.5);
-  animation: wvs 22s linear infinite;
+  animation-duration: 22s;
+  animation: wvs linear infinite;
 }
 
 .wave4 {
@@ -145,17 +146,17 @@ p {
   height: 300vw;
   top: -35vw;
   left: 50%;
-  transform: translate(-50%, -75%);
   border-radius: 42%;
   background: rgba(75, 75, 75, 0.5);
-  animation: wvs 29s linear infinite;
+  animation-duration: 29s;
+  animation: wvs linear infinite;
 }
- 
-@keyframes wvs {
-  0% {
-    transform: translate(-50%, -75%) rotate(0deg);
-  }
-   
+
+.waves > * {
+  transform: translate(-50%, -75%);
+}
+
+@keyframes wvs {   
   100% {
     transform: translate(-50%, -75%) rotate(180deg);
   }

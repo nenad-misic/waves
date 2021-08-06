@@ -15,21 +15,38 @@
       </div>
       <div class="waves-container">
         <div class="waves">
-          <div class="wave1"></div>
-          <div class="wave2"></div>
-          <div class="wave3"></div>
-          <div class="wave4"></div>
+          <div class="enable_animate wave1"></div>
+          <div class="enable_animate wave2"></div>
+          <div class="enable_animate wave3"></div>
+          <div class="enable_animate wave4"></div>
         </div>
       </div>  
     </div>
     	
 </body>
 </html>
+<script src="config.js"></script>
 <script>
   setTimeout(() => {
     document.getElementById('fq').style.backgroundPositionX = '20000vw'
-  }, 500)
+  }, 5)
+</script>
+<script>
+  setTimeout(() => {
+    var i = 0;
     
-  
-  
+    var els = [document.querySelector('.wave1'), document.querySelector('.wave2'), document.querySelector('.wave3'), document.querySelector('.wave4')]
+    var durations = [8, 15, 22, 29]
+      for (let j = 0; j < els.length; j++) {
+        els[j].style.animationDuration = `${durations[j] }s`
+      }
+
+    setInterval( () => {
+      document.querySelector('.waves').style.backgroundColor = `${colors[i%colors.length]}dd`;
+      for (let j = 0; j < els.length; j++) {
+        els[j].style.animationDuration = `${durations[j] / speeds[i%speeds.length] }s`
+      }
+      i+= 1;
+    }, 9000*change_color_and_speed_after_iteration)
+  }, 5)
 </script>
