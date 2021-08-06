@@ -86,9 +86,16 @@ p {
   opacity: 0.9;
 }
 
+@media (min-width:768px){
+  .waves {
+    transform: translate(0px, 0px) !important;
+  }
+}
+
 .waves {
   height: 100%;
   width: 100%;
+  transform: translate(0px, 35vh);
   background: #313878dd !important;
   
 }
