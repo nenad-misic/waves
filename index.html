@@ -26,27 +26,34 @@
 </body>
 </html>
 <script src="config.js"></script>
+
+<script>
+    var currentRotations = [0,0,0,0]
+    var els = [document.querySelector('.wave1'), document.querySelector('.wave2'), document.querySelector('.wave3'), document.querySelector('.wave4')]
+    var durations = [8, 15, 22, 29]
+    var i = 0;
+</script>
+<script>
+  let initial_color = colors[0]
+  colors = colors.slice(1)
+  document.querySelector('.waves').style.backgroundColor = `${initial_color}dd`;
+  document.querySelector('.waves').style.transition = `background-color ${color_shift_duration}s ease-out`  
+
+</script>
 <script>
   setTimeout(() => {
     document.getElementById('fq').style.backgroundPositionX = '20000vw'
   }, 5)
 </script>
 <script>
-  setTimeout(() => {
-    var i = 0;
-    
-    var els = [document.querySelector('.wave1'), document.querySelector('.wave2'), document.querySelector('.wave3'), document.querySelector('.wave4')]
-    var durations = [8, 15, 22, 29]
+    setInterval(() => {
       for (let j = 0; j < els.length; j++) {
-        els[j].style.animationDuration = `${durations[j] }s`
-      }
-
+        currentRotations[j] = currentRotations[j] + 180/(fps*(durations[j] / speeds[i%speeds.length]));
+        els[j].style.transform = `translate(-50%, -75%) rotate(${currentRotations[j]%180}deg)` 
+      }      
+    }, 1000/fps)
     setInterval( () => {
       document.querySelector('.waves').style.backgroundColor = `${colors[i%colors.length]}dd`;
-      for (let j = 0; j < els.length; j++) {
-        els[j].style.animationDuration = `${durations[j] / speeds[i%speeds.length] }s`
-      }
       i+= 1;
-    }, 9000*change_color_and_speed_after_iteration)
-  }, 5)
+    }, 9000 * change_color_and_speed_after_iteration)
 </script>

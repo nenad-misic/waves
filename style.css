@@ -92,12 +92,6 @@ p {
   height: 100%;
   width: 100%;
   transform: translate(0px, 35vh);
-  -webkit-transition: background-color 1s ease-out;
-  -moz-transition: background-color 1s ease-out;
-  -o-transition: background-color 1s ease-out;
-  transition: background-color 1s ease-out;
-  background-color: #313878dd;
-  
   
 }
 
@@ -110,8 +104,6 @@ p {
   opacity: 0.8;
   border-radius: 45%;
   background: rgba(75, 75, 75, 1);
-  animation-duration: 8s;
-  animation: wvs linear infinite;
 }
 
 
@@ -123,36 +115,27 @@ p {
   left: 50%;
   border-radius: 44%;
   background: rgba(75, 75, 75, 0.5);
-  animation-duration: 15s;
-  animation: wvs linear infinite;
 }
 
  
 .wave3 {
-  position: absolute;
-  width: 300%;
-  height: 300vw;
   top: -39vw;
   left: 50%;
   border-radius: 43%;
   background: rgba(75, 75, 75, 0.5);
-  animation-duration: 22s;
-  animation: wvs linear infinite;
 }
 
 .wave4 {
-  position: absolute;
-  width: 300%;
-  height: 300vw;
   top: -35vw;
   left: 50%;
   border-radius: 42%;
   background: rgba(75, 75, 75, 0.5);
-  animation-duration: 29s;
-  animation: wvs linear infinite;
 }
 
 .waves > * {
+  position: absolute;
+  width: 300%;
+  height: 300vw;
   transform: translate(-50%, -75%);
 }
 
